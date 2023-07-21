@@ -1,2 +1,15 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+.history
+.ionide
+# Ignore pycache folder
 __pycache__/
+
+# Ignore keys.py file
 keys.py
