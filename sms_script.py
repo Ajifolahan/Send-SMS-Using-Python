@@ -14,18 +14,15 @@ picture_list = ['https://i.pinimg.com/736x/d7/d4/00/d7d400619965cc9e6af0886d27d6
             'https://mario.wiki.gallery/images/thumb/3/3e/MPSS_Mario.png/640px-MPSS_Mario.png', 'https://www.bleepstatic.com/content/hl-images/2023/06/23/super-mario-bros.jpg',
             'https://ntvb.tmsimg.com/assets/p184536_b_h8_dg.jpg']
 
-body_list = ['Good morning baby! I hope you slept well', 'I love you Princess, Good morning!', 'I loaf you!', 'Idunoba my love!',
-             'I will stand between the heavens and the earth, I wil tell you where you are! Do you love me?', 'I love you Julia!']
-
 
 def job():
-    random.shuffle(body_list)
+    random.shuffle(keys.body_list)
     random.shuffle(picture_list)
 
-    message = client.messages.create(body=random.choice(body_list),
+    message = client.messages.create(body=random.choice(keys.body_list),
                                      from_=keys.from_number,
                                      media_url=random.choice(picture_list),
-                                     to=keys.to_number)
+                                     to=keys.to_number2)
     print(message.body)
 
 def schedule_job():
@@ -37,3 +34,4 @@ schedule_job()
 while True:
     schedule.run_pending()
     time.sleep(1)
+
